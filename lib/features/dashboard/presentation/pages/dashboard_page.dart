@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../widgets/dashboard_header.dart';
 import '../widgets/stats_grid.dart';
 import '../widgets/chart_section.dart';
-// ...existing code...
 import '../../../../core/constants/app_constants.dart';
+import 'jump_target_screen.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -28,6 +29,24 @@ class DashboardPage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: Container(
+        margin: const EdgeInsets.only(bottom: 5), // Más abajo
+        child: SizedBox(
+          width: 48,
+          height: 48,
+          child: FloatingActionButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const JumpTargetScreen()),
+              );
+            },
+            backgroundColor: Colors.blueAccent,
+            child: const Icon(Icons.arrow_downward, size: 20),
+            shape: const CircleBorder(),
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
