@@ -6,8 +6,22 @@ import 'package:latlong2/latlong.dart';
 import '../../../../core/constants/app_constants.dart';
 // ...existing code...
 
-class ChartSection extends StatelessWidget {
+class ChartSection extends StatefulWidget {
   const ChartSection({super.key});
+
+  @override
+  State<ChartSection> createState() => _ChartSectionState();
+}
+
+class _ChartSectionState extends State<ChartSection> {
+  String selectedDisease = 'Bronquitis';
+  final List<String> diseases = [
+    'Bronquitis',
+    'Zika',
+    'Sarampion',
+    'Influencia',
+    'Gripe Ah1N1',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -30,19 +44,42 @@ class ChartSection extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
+                    horizontal: 8,
+                    vertical: 2,
                   ),
                   decoration: BoxDecoration(
                     color: const Color(0xFF2196F3).withOpacity(0.2),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Text(
-                    'Este mes',
-                    style: GoogleFonts.poppins(
-                      fontSize: 12,
-                      color: const Color(0xFF2196F3),
-                      fontWeight: FontWeight.w500,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: selectedDisease,
+                      dropdownColor: Colors.white,
+                      icon: const Icon(
+                        Icons.arrow_drop_down,
+                        color: Color(0xFF2196F3),
+                      ),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12,
+                        color: const Color(0xFF2196F3),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      items:
+                          diseases
+                              .map(
+                                (disease) => DropdownMenuItem(
+                                  value: disease,
+                                  child: Text(disease),
+                                ),
+                              )
+                              .toList(),
+                      onChanged: (value) {
+                        if (value != null) {
+                          setState(() {
+                            selectedDisease = value;
+                          });
+                        }
+                      },
                     ),
                   ),
                 ),
@@ -55,7 +92,8 @@ class ChartSection extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const MapFullscreenPage(),
+                      builder:
+                          (_) => MapFullscreenPage(disease: selectedDisease),
                     ),
                   );
                 },

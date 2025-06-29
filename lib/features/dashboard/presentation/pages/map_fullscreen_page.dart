@@ -4,7 +4,8 @@ import 'package:latlong2/latlong.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MapFullscreenPage extends StatelessWidget {
-  const MapFullscreenPage({super.key});
+  final String disease;
+  const MapFullscreenPage({super.key, this.disease = 'Bronquitis'});
 
   @override
   Widget build(BuildContext context) {
@@ -30,232 +31,214 @@ class MapFullscreenPage extends StatelessWidget {
             subdomains: const ['a', 'b', 'c'],
             userAgentPackageName: 'com.example.jvadev',
           ),
-          CircleLayer(
-            circles: [
-              // Hospital Japonés
-              CircleMarker(
-                point: LatLng(-17.7725285, -63.153871),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7725285, -63.153871),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7725285, -63.153871),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital de Niños Dr. Mario Ortiz Suárez
-              CircleMarker(
-                point: LatLng(-17.7807346, -63.1890985),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7807346, -63.1890985),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7807346, -63.1890985),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital San Juan de Dios
-              CircleMarker(
-                point: LatLng(-17.779344, -63.1887634),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.779344, -63.1887634),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.779344, -63.1887634),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital Percy Boland
-              CircleMarker(
-                point: LatLng(-17.7783784, -63.1897871),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7783784, -63.1897871),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7783784, -63.1897871),
-                color: Colors.red.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital Municipal Francés
-              CircleMarker(
-                point: LatLng(-17.8518622, -63.2225207),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.8518622, -63.2225207),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.8518622, -63.2225207),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital del Norte
-              CircleMarker(
-                point: LatLng(-17.3487718, -66.1773225),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.3487718, -66.1773225),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.3487718, -66.1773225),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Clínica Foianini
-              CircleMarker(
-                point: LatLng(-17.7916862, -63.1824279),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7916862, -63.1824279),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7916862, -63.1824279),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital La Católica
-              CircleMarker(
-                point: LatLng(-17.7374565, -63.1923283),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7374565, -63.1923283),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7374565, -63.1923283),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital de la Mujer Dr. Percy Boland
-              CircleMarker(
-                point: LatLng(-17.7783784, -63.1897871),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7783784, -63.1897871),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.7783784, -63.1897871),
-                color: Colors.red.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-              // Hospital General San Juan de Dios
-              CircleMarker(
-                point: LatLng(-17.9757477, -67.1164299),
-                color: Colors.yellow.withOpacity(0.7),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 80,
-              ),
-              CircleMarker(
-                point: LatLng(-17.9757477, -67.1164299),
-                color: Colors.orange.withOpacity(0.5),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 180,
-              ),
-              CircleMarker(
-                point: LatLng(-17.9757477, -67.1164299),
-                color: Colors.red.withOpacity(0.4),
-                borderStrokeWidth: 0,
-                useRadiusInMeter: true,
-                radius: 300,
-              ),
-            ],
-          ),
+          CircleLayer(circles: _getHeatmapCircles(disease)),
         ],
       ),
     );
+  }
+
+  List<CircleMarker> _getHeatmapCircles(String disease) {
+    // Simulación de zonas grandes y esparcidas para cada enfermedad
+    switch (disease) {
+      case 'Bronquitis':
+        return [
+          CircleMarker(
+            point: LatLng(-17.75, -63.18),
+            color: Colors.yellow.withOpacity(0.7),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 200,
+          ),
+          CircleMarker(
+            point: LatLng(-17.80, -63.22),
+            color: Colors.orange.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 350,
+          ),
+          CircleMarker(
+            point: LatLng(-17.85, -63.16),
+            color: Colors.red.withOpacity(0.4),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 500,
+          ),
+        ];
+      case 'Zika':
+        return [
+          CircleMarker(
+            point: LatLng(-17.78, -63.19),
+            color: Colors.yellow.withOpacity(0.7),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 250,
+          ),
+          CircleMarker(
+            point: LatLng(-17.82, -63.21),
+            color: Colors.orange.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 400,
+          ),
+          CircleMarker(
+            point: LatLng(-17.77, -63.14),
+            color: Colors.red.withOpacity(0.4),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 600,
+          ),
+        ];
+      case 'Sarampion':
+        return [
+          // Centro
+          CircleMarker(
+            point: LatLng(-17.783327, -63.182140),
+            color: Colors.yellow.withOpacity(0.8),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 350,
+          ),
+          CircleMarker(
+            point: LatLng(-17.7807346, -63.1890985),
+            color: Colors.orange.withOpacity(0.7),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 400,
+          ),
+          CircleMarker(
+            point: LatLng(-17.779344, -63.1887634),
+            color: Colors.red.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 500,
+          ),
+          // Plan 3000 - zona crítica
+          CircleMarker(
+            point: LatLng(-17.8518622, -63.2225207),
+            color: Colors.yellow.withOpacity(0.9),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 250,
+          ),
+          CircleMarker(
+            point: LatLng(-17.8518622, -63.2225207),
+            color: Colors.orange.withOpacity(0.8),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 400,
+          ),
+          CircleMarker(
+            point: LatLng(-17.8518622, -63.2225207),
+            color: Colors.red.withOpacity(0.7),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 700,
+          ),
+          CircleMarker(
+            point: LatLng(-17.85, -63.23),
+            color: Colors.red.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 500,
+          ),
+          // Villa 1ro de Mayo
+          CircleMarker(
+            point: LatLng(-17.7783784, -63.1897871),
+            color: Colors.red.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 400,
+          ),
+          // Norte
+          CircleMarker(
+            point: LatLng(-17.75, -63.15),
+            color: Colors.yellow.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 350,
+          ),
+          CircleMarker(
+            point: LatLng(-17.80, -63.22),
+            color: Colors.orange.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 300,
+          ),
+          // Sur
+          CircleMarker(
+            point: LatLng(-17.90, -63.20),
+            color: Colors.red.withOpacity(0.4),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 700,
+          ),
+          // Oeste
+          CircleMarker(
+            point: LatLng(-17.83, -63.25),
+            color: Colors.orange.withOpacity(0.4),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 400,
+          ),
+          // Este
+          CircleMarker(
+            point: LatLng(-17.77, -63.13),
+            color: Colors.red.withOpacity(0.3),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 600,
+          ),
+        ];
+      case 'Influencia':
+        return [
+          CircleMarker(
+            point: LatLng(-17.81, -63.18),
+            color: Colors.yellow.withOpacity(0.7),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 350,
+          ),
+          CircleMarker(
+            point: LatLng(-17.84, -63.23),
+            color: Colors.orange.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 500,
+          ),
+          CircleMarker(
+            point: LatLng(-17.78, -63.15),
+            color: Colors.red.withOpacity(0.4),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 800,
+          ),
+        ];
+      case 'Gripe Ah1N1':
+        return [
+          CircleMarker(
+            point: LatLng(-17.77, -63.20),
+            color: Colors.yellow.withOpacity(0.7),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 400,
+          ),
+          CircleMarker(
+            point: LatLng(-17.86, -63.18),
+            color: Colors.orange.withOpacity(0.5),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 600,
+          ),
+          CircleMarker(
+            point: LatLng(-17.80, -63.12),
+            color: Colors.red.withOpacity(0.4),
+            borderStrokeWidth: 0,
+            useRadiusInMeter: true,
+            radius: 900,
+          ),
+        ];
+      default:
+        return [];
+    }
   }
 }
